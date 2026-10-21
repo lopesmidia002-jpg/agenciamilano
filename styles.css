@@ -739,9 +739,9 @@ body.drawer-open > .bottom-mobile-bar {
 }
 
 .form-grid-2 {
-  display: grid !important;
-  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-  gap: 0.75rem !important;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
   width: 100%;
 }
 
@@ -749,7 +749,6 @@ body.drawer-open > .bottom-mobile-bar {
   min-width: 0;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
 }
 
 .form-label {
@@ -3279,6 +3278,7 @@ body.drawer-open > .bottom-mobile-bar {
 
   .form-grid-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.85rem;
   }
 
   .metrics-cards-grid {
