@@ -1181,17 +1181,16 @@ body.drawer-open > .bottom-mobile-bar {
   }
 }
 
-/* Floating Badge Overlapping Map */
+/* Floating Badge Overlapping Map (Desktop Only) */
 .map-floating-badge {
+  display: none !important;
   background-color: #FFFFFF;
   border: 1px solid rgba(0, 0, 0, 0.06);
   border-radius: 14px;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.07);
   padding: 0.65rem 0.95rem;
-  display: flex;
   flex-direction: column;
   z-index: 5;
-  margin-top: 1rem;
   width: auto;
   max-width: 215px;
   box-sizing: border-box;
@@ -3341,15 +3340,6 @@ body.drawer-open > .bottom-mobile-bar {
 
 /* Tablet Landscape & Small Laptop (min-width: 768px) */
 @media (min-width: 768px) {
-  .map-floating-badge {
-    position: absolute;
-    bottom: 12px;
-    left: -20px;
-    margin-top: 0;
-    max-width: 215px;
-    padding: 0.65rem 0.95rem;
-  }
-
   .btn {
     white-space: nowrap;
     width: auto;
@@ -3565,6 +3555,7 @@ body.drawer-open > .bottom-mobile-bar {
   }
 
   .map-floating-badge {
+    display: flex !important;
     position: absolute;
     bottom: 12px;
     left: -25px;
