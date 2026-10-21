@@ -365,30 +365,38 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* --------------------------------------------------------------------------
-   6. Site Header (Logo Only)
+   6. Site Header (Logo Only - Seamless / No Bar)
    -------------------------------------------------------------------------- */
 .site-header {
-  position: sticky;
+  position: absolute;
   top: 0;
-  z-index: 100;
-  background-color: rgba(255, 255, 255, 0.94);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
-  border-bottom: 1px solid var(--border-light);
-  transition: all var(--transition-fast);
+  left: 0;
+  width: 100%;
+  z-index: 50;
+  background: transparent !important;
+  background-color: transparent !important;
+  border: none !important;
+  border-bottom: none !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  padding: 1.5rem 0 0.5rem;
 }
 
 .header-container {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  height: 68px;
+  height: auto;
 }
 
 @media (max-width: 767px) {
+  .site-header {
+    padding: 1.25rem 0 0.5rem;
+  }
   .header-container {
-    justify-content: center;
-    height: 62px;
+    justify-content: flex-start;
+    height: auto;
   }
 }
 
@@ -516,7 +524,7 @@ body.drawer-open > .bottom-mobile-bar {
    -------------------------------------------------------------------------- */
 .hero-section {
   position: relative;
-  padding-top: 2.5rem;
+  padding-top: 5.75rem;
   padding-bottom: 3.5rem;
   background-color: #FAFAFA;
   background-image: 
@@ -524,6 +532,13 @@ body.drawer-open > .bottom-mobile-bar {
     linear-gradient(to bottom, rgba(0, 0, 0, 0.035) 1px, transparent 1px);
   background-size: 54px 54px;
   overflow: hidden;
+}
+
+@media (max-width: 767px) {
+  .hero-section {
+    padding-top: 4.75rem;
+    padding-bottom: 2.75rem;
+  }
 }
 
 .hero-bg-glow {
