@@ -1,0 +1,17 @@
+.git
+.gitignore
+.vscode
+.idea
+*.md
+*.log
+*.txt
+scratch/
+check_strip.js
+crop_test.js
+desktop_cta.png
+guarantees_test.png
+test_screen.png
+Dockerfile
+docker-compose*.yml
+.dockerignore
+gitignore/
