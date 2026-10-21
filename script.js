@@ -5,53 +5,6 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
-  /* ==========================================================================
-     1. Mobile Drawer Navigation Controller
-     ========================================================================== */
-  const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-  const mobileDrawer = document.getElementById('mobileDrawer');
-  const mobileCloseBtn = document.getElementById('mobileCloseBtn');
-  const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
-
-  function openMobileMenu() {
-    mobileDrawer.classList.add('active');
-    mobileDrawer.setAttribute('aria-hidden', 'false');
-    document.body.classList.add('drawer-open');
-    document.body.style.overflow = 'hidden';
-    if (mobileMenuBtn) {
-      mobileMenuBtn.setAttribute('aria-expanded', 'true');
-    }
-  }
-
-  function closeMobileMenu() {
-    mobileDrawer.classList.remove('active');
-    mobileDrawer.setAttribute('aria-hidden', 'true');
-    document.body.classList.remove('drawer-open');
-    document.body.style.overflow = '';
-    if (mobileMenuBtn) {
-      mobileMenuBtn.setAttribute('aria-expanded', 'false');
-    }
-  }
-
-  if (mobileMenuBtn && mobileDrawer) {
-    mobileMenuBtn.addEventListener('click', openMobileMenu);
-  }
-
-  if (mobileCloseBtn) {
-    mobileCloseBtn.addEventListener('click', closeMobileMenu);
-  }
-
-  if (mobileDrawer) {
-    mobileDrawer.addEventListener('click', (e) => {
-      if (e.target === mobileDrawer) {
-        closeMobileMenu();
-      }
-    });
-  }
-
-  mobileNavLinks.forEach(link => {
-    link.addEventListener('click', closeMobileMenu);
-  });
 
   /* ==========================================================================
      2. Pain Cards & Advantage Cards Interactive Activation (Hover Only, No Click Lock)
@@ -424,15 +377,23 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Initialize already active FAQ item (Question 1 open matching mobile.png)
-  faqItems.forEach(item => {
-    if (item.classList.contains('active')) {
-      const panel = item.querySelector('.faq-answer-panel');
-      const btn = item.querySelector('.faq-question-btn');
-      if (panel) panel.style.maxHeight = panel.scrollHeight + 'px';
-      if (btn) btn.setAttribute('aria-expanded', 'true');
-    }
-  });
+  // Initialize already active FAQ item (Question 1 open matching reference layout)
+  const syncActiveFaqHeight = () => {
+    faqItems.forEach(item => {
+      if (item.classList.contains('active')) {
+        const panel = item.querySelector('.faq-answer-panel');
+        const btn = item.querySelector('.faq-question-btn');
+        if (panel) panel.style.maxHeight = panel.scrollHeight + 'px';
+        if (btn) btn.setAttribute('aria-expanded', 'true');
+      }
+    });
+  };
+
+  syncActiveFaqHeight();
+  window.addEventListener('resize', syncActiveFaqHeight);
+  if (document.fonts) {
+    document.fonts.ready.then(syncActiveFaqHeight);
+  }
 
 
 

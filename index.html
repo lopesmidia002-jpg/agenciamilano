@@ -23,76 +23,18 @@
   <link rel="icon" type="image/png" href="LOGO-PRETA.png">
   
   <!-- Stylesheet (Mobile-First) -->
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css?v=1.9">
 </head>
 <body>
 
-  <!-- Top Announcement Bar (Mobile & Desktop) -->
-  <div class="announcement-bar">
-    <div class="container announcement-content">
-      <span class="pulse-dot-green"></span>
-      <span>Vagas estratégicas abertas para clínicas particulares • Atendimento em todo o Brasil</span>
-    </div>
-  </div>
-
-  <!-- Header / Navbar -->
+  <!-- Header / Navbar (Logo Only) -->
   <header class="site-header" id="header">
     <div class="container header-container">
       <a href="#hero" class="brand-logo" aria-label="Milano Assessoria de Marketing & Performance">
         <img src="LOGO-PRETA.png" alt="Milano Assessoria" class="logo-img logo-dark">
       </a>
-
-      <!-- Desktop Nav -->
-      <nav class="desktop-nav" aria-label="Navegação principal">
-        <ul class="nav-links">
-          <li><a href="#metodo">O Método</a></li>
-          <li><a href="#servicos">Serviços</a></li>
-          <li><a href="#cases">Cases</a></li>
-          <li><a href="#quem-somos">Quem Somos</a></li>
-          <li><a href="#faq">Dúvidas</a></li>
-        </ul>
-      </nav>
-
-      <div class="header-actions">
-        <a href="#agendar" class="btn btn-outline-nav btn-sm">
-          <span>Agendar Reunião</span>
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-        </a>
-        <button class="mobile-toggle" id="mobileMenuBtn" aria-label="Abrir menu" aria-expanded="false">
-          <span class="bar"></span>
-          <span class="bar"></span>
-          <span class="bar"></span>
-        </button>
-      </div>
     </div>
-
   </header>
-
-  <!-- Mobile Drawer Navigation (Full Viewport Overlay with Backdrop Blur) -->
-  <div class="mobile-drawer" id="mobileDrawer" aria-hidden="true">
-    <div class="mobile-drawer-inner">
-      <div class="mobile-drawer-header">
-        <img src="LOGO-PRETA.png" alt="Milano Logo" class="mobile-drawer-logo">
-        <button class="mobile-close-btn" id="mobileCloseBtn" aria-label="Fechar menu">✕</button>
-      </div>
-      <ul class="mobile-nav-list">
-        <li><a href="#metodo" class="mobile-nav-link">O Método</a></li>
-        <li><a href="#servicos" class="mobile-nav-link">Serviços</a></li>
-        <li><a href="#cases" class="mobile-nav-link">Cases de Sucesso</a></li>
-        <li><a href="#quem-somos" class="mobile-nav-link">Quem Somos</a></li>
-        <li><a href="#faq" class="mobile-nav-link">Dúvidas Frequentes</a></li>
-      </ul>
-      <div class="mobile-drawer-cta">
-        <a href="#agendar" class="btn btn-primary btn-pill-cta mobile-nav-link">
-          <div class="btn-badge-icon" aria-hidden="true">
-            <img src="milano-symbol.svg" alt="" width="22" height="19" class="badge-symbol-img">
-          </div>
-          <span class="btn-text">Quero minha reunião estratégica</span>
-          <svg class="btn-arrow-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-        </a>
-      </div>
-    </div>
-  </div>
 
   <main>
     <!-- SEÇÃO 1: HERO SECTION & FORMULÁRIO -->
@@ -225,6 +167,7 @@
 
     <!-- Specialty Marquee Ticker -->
     <div class="specialty-marquee" aria-hidden="true">
+      <div class="marquee-fade marquee-fade-left" style="position: absolute; top: 0; bottom: 0; left: 0; width: 140px; background: linear-gradient(to right, #FFFFFF 15%, rgba(255,255,255,0.85) 50%, rgba(255,255,255,0) 100%); z-index: 10; pointer-events: none;"></div>
       <div class="marquee-track">
         <span class="marquee-item">Dermatologia</span>
         <span class="marquee-separator">•</span>
@@ -265,6 +208,7 @@
         <span class="marquee-separator">•</span>
         <span class="marquee-item">Odontologia</span>
       </div>
+      <div class="marquee-fade marquee-fade-right" style="position: absolute; top: 0; bottom: 0; right: 0; width: 140px; background: linear-gradient(to left, #FFFFFF 15%, rgba(255,255,255,0.85) 50%, rgba(255,255,255,0) 100%); z-index: 10; pointer-events: none;"></div>
     </div>
 
     <!-- SEÇÃO 2: NÚMEROS E PRESENÇA NACIONAL -->
@@ -633,16 +577,16 @@
             </div>
           </div>
 
-          <!-- Stage Text Info Card Right -->
-          <div class="stage-info-panel">
-            <span class="stage-step-eyebrow" id="stageStepEyebrow">ETAPA 01 DE 03</span>
+          <!-- Stage Text Info Card Right (Matching Reference - No Card Box) -->
+          <div class="stage-info-panel" style="background: transparent !important; border: none !important; border-radius: 0 !important; box-shadow: none !important; padding: 0 !important;">
+            <span class="stage-step-eyebrow" id="stageStepEyebrow" style="color: #8E8E93 !important;">ETAPA 01 DE 03</span>
             <h3 class="stage-step-title" id="stageStepTitle">Alcance</h3>
-            <p class="stage-step-tagline" id="stageStepTagline">O paciente certo encontra você</p>
-            <p class="stage-step-desc" id="stageStepDesc">
+            <p class="stage-step-tagline" id="stageStepTagline" style="color: #FF385C !important;">O paciente certo encontra você</p>
+            <p class="stage-step-desc" id="stageStepDesc" style="color: #9CA3AF !important;">
               Anúncios no Meta e no Google, Google Meu Negócio e reputação digital para encontrar o paciente particular da sua região.
             </p>
 
-            <!-- Stage Indicators / Tabs -->
+            <!-- Stage Indicators / Tabs: Compact Pill Dashes -->
             <div class="stage-indicators" role="tablist">
               <button class="indicator-bar active" data-stage="1" aria-label="Ver etapa 1"></button>
               <button class="indicator-bar" data-stage="2" aria-label="Ver etapa 2"></button>
@@ -1564,6 +1508,7 @@
 
     <!-- Social proof numbers strip (Carrossel Informativo Contínuo) -->
     <div class="metric-ticker-strip" aria-label="Indicadores de performance">
+      <div class="marquee-fade marquee-fade-left" style="position: absolute; top: 0; bottom: 0; left: 0; width: 140px; background: linear-gradient(to right, #FFFFFF 15%, rgba(255,255,255,0.85) 50%, rgba(255,255,255,0) 100%); z-index: 10; pointer-events: none;"></div>
       <div class="ticker-inner">
         <span>+400 marcas e médicos atendidos</span>
         <span class="dot">•</span>
@@ -1599,6 +1544,7 @@
         <span>+7 anos de mercado</span>
         <span class="dot">•</span>
       </div>
+      <div class="marquee-fade marquee-fade-right" style="position: absolute; top: 0; bottom: 0; right: 0; width: 140px; background: linear-gradient(to left, #FFFFFF 15%, rgba(255,255,255,0.85) 50%, rgba(255,255,255,0) 100%); z-index: 10; pointer-events: none;"></div>
     </div>
 
     <!-- SEÇÃO: PARA QUEM A ASSESSORIA FAZ SENTIDO (QUALIFICAÇÃO DE PERFIL) -->
@@ -1731,22 +1677,27 @@
 
     <!-- SEÇÃO 8: PERGUNTAS FREQUENTES (ACCORDION FAQ) -->
     <section class="section section-faq" id="faq">
-      <div class="container">
+      <div class="container faq-layout-grid">
         
-        <div class="section-header text-center">
-          <div class="pill-tag pill-tag-centered">
+        <!-- Coluna Esquerda: Cabeçalho da Seção -->
+        <div class="faq-header-col">
+          <div class="pill-tag">
             <span class="pill-dot"></span>
             <span>DÚVIDAS FREQUENTES</span>
           </div>
-          <h2 class="section-title">Perguntas frequentes sobre a assessoria</h2>
-          <p class="section-subtitle">
+          <h2 class="faq-section-title">Perguntas frequentes<br>sobre a assessoria</h2>
+          <p class="faq-section-subtitle">
             Ficou alguma dúvida? Na reunião estratégica a gente responde olhando o seu caso.
           </p>
-          <div class="mt-3">
-            <a href="#agendar" class="link-meeting-faq">Tirar minhas dúvidas na reunião →</a>
+          <div class="faq-action-wrapper">
+            <a href="#agendar" class="faq-meeting-btn">
+              <span>Tirar minhas dúvidas na reunião</span>
+              <span class="faq-arrow-icon" aria-hidden="true">→</span>
+            </a>
           </div>
         </div>
 
+        <!-- Coluna Direita: Acordeão com 10 Perguntas -->
         <div class="faq-accordion-container" id="faqAccordion">
           
           <!-- Pergunta 1 -->
@@ -1754,8 +1705,8 @@
             <button class="faq-question-btn" aria-expanded="false">
               <span class="faq-number">01</span>
               <span class="faq-question-text">O que está incluso na assessoria e quem executa?</span>
-              <span class="faq-icon-toggle">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              <span class="faq-icon-toggle" aria-hidden="true">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line class="faq-icon-vertical" x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
               </span>
             </button>
             <div class="faq-answer-panel">
@@ -1770,8 +1721,8 @@
             <button class="faq-question-btn" aria-expanded="false">
               <span class="faq-number">02</span>
               <span class="faq-question-text">Não tenho tempo para cuidar disso. Isso é para mim?</span>
-              <span class="faq-icon-toggle">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              <span class="faq-icon-toggle" aria-hidden="true">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line class="faq-icon-vertical" x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
               </span>
             </button>
             <div class="faq-answer-panel">
@@ -1786,8 +1737,8 @@
             <button class="faq-question-btn" aria-expanded="false">
               <span class="faq-number">03</span>
               <span class="faq-question-text">Não quero aparecer em vídeo. Funciona?</span>
-              <span class="faq-icon-toggle">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              <span class="faq-icon-toggle" aria-hidden="true">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line class="faq-icon-vertical" x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
               </span>
             </button>
             <div class="faq-answer-panel">
@@ -1802,8 +1753,8 @@
             <button class="faq-question-btn" aria-expanded="false">
               <span class="faq-number">04</span>
               <span class="faq-question-text">Vocês já atenderam a minha especialidade?</span>
-              <span class="faq-icon-toggle">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              <span class="faq-icon-toggle" aria-hidden="true">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line class="faq-icon-vertical" x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
               </span>
             </button>
             <div class="faq-answer-panel">
@@ -1818,8 +1769,8 @@
             <button class="faq-question-btn" aria-expanded="false">
               <span class="faq-number">05</span>
               <span class="faq-question-text">O paciente chama e a secretária não fecha. Vocês resolvem isso?</span>
-              <span class="faq-icon-toggle">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              <span class="faq-icon-toggle" aria-hidden="true">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line class="faq-icon-vertical" x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
               </span>
             </button>
             <div class="faq-answer-panel">
@@ -1834,8 +1785,8 @@
             <button class="faq-question-btn" aria-expanded="false">
               <span class="faq-number">06</span>
               <span class="faq-question-text">Já tive agência e não funcionou. Por que seria diferente?</span>
-              <span class="faq-icon-toggle">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              <span class="faq-icon-toggle" aria-hidden="true">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line class="faq-icon-vertical" x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
               </span>
             </button>
             <div class="faq-answer-panel">
@@ -1850,8 +1801,8 @@
             <button class="faq-question-btn" aria-expanded="false">
               <span class="faq-number">07</span>
               <span class="faq-question-text">Vocês garantem resultados?</span>
-              <span class="faq-icon-toggle">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              <span class="faq-icon-toggle" aria-hidden="true">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line class="faq-icon-vertical" x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
               </span>
             </button>
             <div class="faq-answer-panel">
@@ -1866,8 +1817,8 @@
             <button class="faq-question-btn" aria-expanded="false">
               <span class="faq-number">08</span>
               <span class="faq-question-text">Quanto custa?</span>
-              <span class="faq-icon-toggle">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              <span class="faq-icon-toggle" aria-hidden="true">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line class="faq-icon-vertical" x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
               </span>
             </button>
             <div class="faq-answer-panel">
@@ -1882,8 +1833,8 @@
             <button class="faq-question-btn" aria-expanded="false">
               <span class="faq-number">09</span>
               <span class="faq-question-text">Tem fidelidade ou multa?</span>
-              <span class="faq-icon-toggle">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              <span class="faq-icon-toggle" aria-hidden="true">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line class="faq-icon-vertical" x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
               </span>
             </button>
             <div class="faq-answer-panel">
@@ -1898,8 +1849,8 @@
             <button class="faq-question-btn" aria-expanded="false">
               <span class="faq-number">10</span>
               <span class="faq-question-text">Vocês trabalham com clínicas fora de São Paulo?</span>
-              <span class="faq-icon-toggle">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              <span class="faq-icon-toggle" aria-hidden="true">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line class="faq-icon-vertical" x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
               </span>
             </button>
             <div class="faq-answer-panel">
@@ -1980,6 +1931,6 @@
   </div>
 
   <!-- Scripts -->
-  <script src="script.js"></script>
+  <script src="script.js?v=1.9"></script>
 </body>
 </html>
