@@ -1068,41 +1068,82 @@ body.drawer-open > .bottom-mobile-bar {
   display: block;
 }
 
-/* Animated Map Pins */
+/* Animated Map Pins - Target style matching reference image */
 .map-pin {
   position: absolute;
-  width: 12px;
-  height: 12px;
+  width: 14px;
+  height: 14px;
   transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  z-index: 2;
+}
+
+/* Outer soft pink/coral halo */
+.pin-ring {
+  position: absolute;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background-color: rgba(255, 46, 85, 0.22);
+  animation: pinHaloPulse 2.8s infinite ease-in-out;
   pointer-events: none;
 }
 
+/* Center target: White circle with crisp black border + black central dot */
 .pin-core {
   position: absolute;
-  inset: 0;
-  background-color: #D61A3C;
-  border: 2px solid #FFFFFF;
+  width: 13px;
+  height: 13px;
+  background-color: #FFFFFF;
+  border: 1.5px solid #000000;
   border-radius: 50%;
-  box-shadow: 0 0 6px rgba(214, 26, 60, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+  z-index: 1;
 }
 
-.pin-ring {
-  position: absolute;
-  inset: -6px;
+.pin-core::after {
+  content: '';
+  display: block;
+  width: 3.5px;
+  height: 3.5px;
+  background-color: #000000;
   border-radius: 50%;
-  background-color: rgba(214, 26, 60, 0.35);
-  animation: pinPulse 2s infinite ease-out;
 }
 
-@keyframes pinPulse {
-  0% { transform: scale(0.6); opacity: 1; }
-  100% { transform: scale(2.2); opacity: 0; }
+@keyframes pinHaloPulse {
+  0%, 100% {
+    transform: scale(0.92);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.15);
+    opacity: 1;
+  }
 }
 
 @media (max-width: 480px) {
   .map-pin {
-    width: 10px;
-    height: 10px;
+    width: 11px;
+    height: 11px;
+  }
+  .pin-ring {
+    width: 22px;
+    height: 22px;
+  }
+  .pin-core {
+    width: 11px;
+    height: 11px;
+    border-width: 1.2px;
+  }
+  .pin-core::after {
+    width: 3px;
+    height: 3px;
   }
 }
 
