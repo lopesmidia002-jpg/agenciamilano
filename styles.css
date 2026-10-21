@@ -2724,17 +2724,12 @@ body.drawer-open > .bottom-mobile-bar {
   }
 }
 
-/* Coluna Esquerda */
+/* Coluna Esquerda (FAQ Header - Centered on mobile, Left-aligned on desktop) */
 .faq-header-col {
-  text-align: left;
-}
-
-@media (min-width: 992px) {
-  .faq-header-col {
-    position: sticky;
-    top: 96px;
-    align-self: flex-start;
-  }
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .faq-header-col .pill-tag {
@@ -2742,6 +2737,7 @@ body.drawer-open > .bottom-mobile-bar {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
+  justify-content: center;
 }
 
 .faq-section-title {
@@ -2752,6 +2748,7 @@ body.drawer-open > .bottom-mobile-bar {
   line-height: 1.15;
   letter-spacing: -0.025em;
   margin-bottom: 1.25rem;
+  text-align: center;
 }
 
 .faq-section-subtitle {
@@ -2759,11 +2756,45 @@ body.drawer-open > .bottom-mobile-bar {
   color: #64748B;
   line-height: 1.55;
   margin-bottom: 1.75rem;
-  max-width: 380px;
+  max-width: 440px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .faq-action-wrapper {
   display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+@media (min-width: 992px) {
+  .faq-header-col {
+    position: sticky;
+    top: 96px;
+    align-self: flex-start;
+    text-align: left;
+    align-items: flex-start;
+  }
+
+  .faq-header-col .pill-tag {
+    justify-content: flex-start;
+  }
+
+  .faq-section-title {
+    text-align: left;
+  }
+
+  .faq-section-subtitle {
+    text-align: left;
+    margin-left: 0;
+    margin-right: 0;
+    max-width: 380px;
+  }
+
+  .faq-action-wrapper {
+    justify-content: flex-start;
+  }
 }
 
 .faq-meeting-btn {
