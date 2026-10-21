@@ -1558,8 +1558,9 @@ body.drawer-open > .bottom-mobile-bar {
   padding: 0 !important;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  text-align: left;
+  align-items: center;
+  text-align: center;
+  margin: 0 auto;
 }
 
 .stage-step-eyebrow {
@@ -1569,7 +1570,7 @@ body.drawer-open > .bottom-mobile-bar {
   letter-spacing: 0.14em;
   color: #8E8E93;
   margin-bottom: 0.75rem;
-  text-align: left;
+  text-align: center;
   text-transform: uppercase;
 }
 
@@ -1579,7 +1580,7 @@ body.drawer-open > .bottom-mobile-bar {
   color: #FFFFFF;
   margin-bottom: 0.4rem;
   letter-spacing: -0.03em;
-  text-align: left;
+  text-align: center;
   line-height: 1.1;
 }
 
@@ -1588,7 +1589,7 @@ body.drawer-open > .bottom-mobile-bar {
   font-weight: 600;
   color: #FF385C;
   margin-bottom: 1.35rem;
-  text-align: left;
+  text-align: center;
 }
 
 .stage-step-desc {
@@ -1596,8 +1597,10 @@ body.drawer-open > .bottom-mobile-bar {
   color: #9CA3AF;
   line-height: 1.65;
   margin-bottom: 1.75rem;
-  text-align: left;
+  text-align: center;
   max-width: 440px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* Stage Indicators: Compact Pill Dashes */
@@ -1607,8 +1610,8 @@ body.drawer-open > .bottom-mobile-bar {
   gap: 0.55rem;
   width: auto;
   max-width: none;
-  margin: 0;
-  justify-content: flex-start;
+  margin: 0 auto;
+  justify-content: center;
 }
 
 .indicator-bar {
@@ -3592,6 +3595,7 @@ body.drawer-open > .bottom-mobile-bar {
   .stage-info-panel {
     align-items: flex-start;
     text-align: left;
+    margin: 0;
   }
 
   .stage-step-eyebrow,
@@ -3599,6 +3603,11 @@ body.drawer-open > .bottom-mobile-bar {
   .stage-step-tagline,
   .stage-step-desc {
     text-align: left;
+  }
+
+  .stage-step-desc {
+    margin-left: 0;
+    margin-right: 0;
   }
 
   .stage-indicators {
